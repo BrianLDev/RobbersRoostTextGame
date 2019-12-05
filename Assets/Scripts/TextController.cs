@@ -38,7 +38,7 @@ public class TextController : MonoBehaviour {
         if (firstTime == true)
         {
             roomText.text = "You wake up with a mouth full of dust and a lingering taste of whiskey, wondering how the hell you fell asleep face first in the dirt.  " +
-                            "The world spins.  From behind you, you hear the crunch of boots on the red clay, walking at a slow gait until it comes to a standstill.\n\n" +
+                            "The world spins as you attempt to wet your lips with a sandpaper tongue.  From behind you, you hear the crunch of boots on the red clay, walking at a slow gait until it comes to a standstill.\n\n" +
                             "\"Kid Curry?!  I been tracking you for thousands of miles.  A mighty fine position you in, aint it?  It ends here.\"\n\n" +
                             "The Sherrif and the Deputy, gotta be.  You reach for your holster, but the piece ain't there.  Shit!\n\n" +
                             "You see a blurry glint of metal to your right that might be your [[G]]un.  " +
@@ -71,7 +71,7 @@ public class TextController : MonoBehaviour {
     {
         roomText.text = "Rolling onto your back, you grab a handful of dirt and rocks and throw it in the asshole's direction, sidearm style.\n\n" +
                         "You leap to your feet and run forward to tackle him...but damn if the world ain't upside down right now...\n\n" +
-                        "As you fall back to the ground, you hear hollow, mocking laughter from behind and wonder just how strong was that damn whiskey.\n\n" +
+                        "As you fall back to the ground, you hear hollow, mocking laughter from behind and wonder just how strong that damn whiskey was.\n\n" +
                         "[[R]]eturn";
         firstTime = false;
         pushYourLuck += 1;
@@ -153,8 +153,9 @@ public class TextController : MonoBehaviour {
                         "As you ride off, you see the Sherrif has made it back to a sitting position and is aiming his gun at you.  You duck down as he fires.\n\n" +
                         "But the horse is too fast and the shot goes wide.  Free and clear, they have no chance at catching you now.  " + 
                         "You recall that Deadwood just opened up a new brothel.  This calls for a little celebration.\n\n" +
-                        "***GAME OVER.  YOU WIN!***\n[[R]]estart";
+                        "***GAME OVER.  YOU WIN!***\n[[R]]estart\n[[Q]]uit";
         if (Input.GetKeyDown(KeyCode.R)) { restart(); }
+        else if (Input.GetKeyDown(KeyCode.Q)) { Application.Quit(); }
     }
 
     void restart()
