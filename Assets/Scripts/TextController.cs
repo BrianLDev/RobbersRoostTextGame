@@ -38,17 +38,17 @@ public class TextController : MonoBehaviour {
         if (firstTime == true)
         {
             roomText.text = "You wake up with a mouth full of dust and a lingering taste of whiskey, wondering how the hell you fell asleep face first in the dirt.  " +
-                            "The world spins as you attempt to wet your lips with a sandpaper tongue.  From behind you, you hear the crunch of boots on the red clay, walking at a slow gait until it comes to a standstill.\n\n" +
-                            "\"Kid Curry?!  I been tracking you for thousands of miles.  A mighty fine position you in, aint it?  It ends here.\"\n\n" +
+                            "The world spins as you attempt to wet your lips with a sandpaper tongue.  From behind you, you hear the crunch of boots on the red clay, walking at a slow gait until they come to a standstill.\n\n" +
+                            "\"Kid Curry?!  I been tracking you for thousands of miles.  A mighty fine position you in, aint it?\"  You hear the unmistakable click of the hammer being drawn back.  \"It ends here.\"\n\n" +
                             "The Sherrif and the Deputy, gotta be.  You reach for your holster, but the piece ain't there.  Shit!\n\n" +
-                            "You see a blurry glint of metal to your right that might be your [[G]]un.  " +
+                            "To your right, you see a blurry glint of metal that might be your [[G]]un.  " +
                             "In your left hand is a [[W]]hiskey bottle, a pile of [[D]]irt is piled up under your face.";
         }
         else
         {
             roomText.text = "\n\nBack to where you started again, with a face full of dirt, a bad hangover, and a gun trained at your head...\n\n" +
                             "You see a blurry glint of metal to your right that might be your [[G]]un.  " +
-                            "In your left hand is ad [[W]]hiskey bottle, a pile of [[D]]irt is piled up under your face.";
+                            "In your left hand is a [[W]]hiskey bottle, a pile of [[D]]irt is piled up under your face.";
         }
         if (Input.GetKeyDown(KeyCode.W)) { myState = States.bottleToFace; }
         else if (Input.GetKeyDown(KeyCode.G)) { myState = States.gunOutOfReach; }
@@ -57,9 +57,9 @@ public class TextController : MonoBehaviour {
 
     void gunOutOfReach()
     {
-        roomText.text = "You grope for that blurry shine and hope to God that it's your gun.  Dust squeezes out from between your fingers as realize you've come up empty.  " +
-                        "A pistol fires from behind you and a plume of dust ejects where your hand used to be.\n\n" +
-                        "\"I wouldn't recommend you do that again, Kid.  Stand up so I can take you back to a nice little cement five by five I got laid out for you.\n\n" +
+        roomText.text = "You grope towards that blurry shine and hope to God that it's your gun.  Dust squeezes out from between your fingers as you realize you've come up empty.  " +
+                        "A gunshot blares from behind you and a plume of dust ejects where your hand used to be.\n\n" +
+                        "\"I wouldn't recommend you do that again, Kid.  Now stand up so I can take you back to a nice little cement five by five I got laid out for you.\"\n\n" +
                         "The dust settles back down and you see he's missed your hand by a few inches.  You flex your fingers in relief.\n\n" +
                         "[[R]]eturn";
         firstTime = false;
@@ -71,7 +71,7 @@ public class TextController : MonoBehaviour {
     {
         roomText.text = "Rolling onto your back, you grab a handful of dirt and rocks and throw it in the asshole's direction, sidearm style.\n\n" +
                         "You leap to your feet and run forward to tackle him...but damn if the world ain't upside down right now...\n\n" +
-                        "As you fall back to the ground, you hear hollow, mocking laughter from behind and wonder just how strong that damn whiskey was.\n\n" +
+                        "As you fall back to the ground, you hear hollow, mocking laughter from behind and wonder just how strong that whiskey was.\n\n" +
                         "[[R]]eturn";
         firstTime = false;
         pushYourLuck += 1;
@@ -81,9 +81,9 @@ public class TextController : MonoBehaviour {
     void bottleToFace()
     {
         roomText.text = "The thought of wasting good whiskey goes against everything you believe in.  But hell, maybe he's thirsty.\n\n" +
-                        "\"All right I'll come with you.  But this laying in the dirt stuff is thirsty work.  Allow me a few swallows.\"\n\n" +
+                        "\"All right I'll come with you, but this laying in the dirt stuff is thirsty work.  Allow me a few swallows.\"\n\n" +
                         "\"That's fine Kid.  Just make it quick.\"\n\n" +
-                        "You tilt the bottle back against your lips and take a long swallow.  Motioning for one more, you tilt it back again, then reach over your head " +
+                        "You tilt the bottle back against your lips and feel a warm tingle rush down your throat.  Motioning for one more, you tilt it back again, then reach over your head " +
                         "and bring your arm down in full force, throwing it in the direction of the two men.  You hear a dull thunk and a low moan before a man crumples to the dirt.  " +
                         "Looks like he was thirsty.\n\n" +
                         "[[S]]tand up";
@@ -103,7 +103,7 @@ public class TextController : MonoBehaviour {
 
     void punchBlocked()
     {
-        roomText.text = "You throw a haymaker at that waif of a Deputy, one so ferocious it would make a grown man cringe just by looking at it.\n\n" +
+        roomText.text = "You throw a haymaker at that waif of a Deputy, one that feels so ferocious you'd swear it would make children cry in terror and men stare in awe.\n\n" +
                         "The deputy throws up his forearm and blocks it.\n\n" +
                         "You've gotta be shittin me?!  You seem to remember that fistfights aren't really your forte.\n\n" +
                         "[[R]]eturn.";
@@ -113,8 +113,8 @@ public class TextController : MonoBehaviour {
 
     void kickMissed()
     {
-        roomText.text = "As the Deputy walks towards you, you sprint directly towards him, throwing up dirt and dust in your wake.\n\n" +
-                        "Just before you reach him, you jump into the air and throw a nasty kick aimed right at his knee.  " +
+        roomText.text = "As the Deputy walks towards you, you sprint directly at him, throwing up dirt and dust in your wake.\n\n" +
+                        "Just before you reach him, you jump into the air and throw a nasty kick aimed right at his knee.\n\n" +
                         "You sail past as the Deputy deftly side steps you.\n\n" +
                         "What is this guy, a God Damn ninja?!\n\n" +
                         "[[R]]eturn.";
@@ -124,10 +124,10 @@ public class TextController : MonoBehaviour {
 
     void armed()
     {
-        roomText.text = "You imagine yourself diving towards your gun, snatching it off the ground with one hand, then roll forward and pop to your feet " +
+        roomText.text = "You imagine yourself diving towards your gun, snatching it off the ground with one hand, then rolling forward to pop up on your feet " +
                         "with your gun aimed at the Deputy.  Ok, works just fine in theory, now for the attempt...\n\n" +
                         "And what do you know, it goes exactly as you planned.\n\n" +
-                        "You now have a gun in your hands, and by most accounts, you are the fastest living gun in the West, hungover or not.  " +
+                        "You now have a gun in your hands in a standoff with the deputy, and by most accounts, you are the fastest living gun in the West, hungover or not.  " +
                         "You hear a horse braying behind you and remember that your 'ol pal Dynamite Hooves is nearby.\n\n" +
                         "[[S]]hoot the deputy, or [[W]]histle for your horse.";
         if (Input.GetKeyDown(KeyCode.S)) { myState = States.shotBySheriff; }
@@ -139,7 +139,7 @@ public class TextController : MonoBehaviour {
         roomText.text = "With a flick of the wrist and a squeeze of the finger, you make quick work of the Deputy.  He didn't stand a chance.  " +
                         "You walk forward to make sure he's dead and gone.  Maybe put another one in him for good merit.\n\n" +
                         "Motion from the corner of your eye.  The Sherrif is sitting up, with an arm on his knee and a gun pointed in your direction.  " +
-                        "A shot rings out and you feel a sharp pinch in your chest.  Bob Marley had it wrong.\n\n" +
+                        "A shot rings out and you feel a sharp pinch in your chest.\n\n" + "Bob Marley had it backwards.\n\n" +
                         "\"The reward is bigger for alive, but I'll just as soon take you back dead.  Good night, Kid.\"\n\n" +
                         "***GAME OVER.  YOU ARE DEAD!***\n\n[[R]]estart";
         if (Input.GetKeyDown(KeyCode.R)) { restart(); }
@@ -151,9 +151,9 @@ public class TextController : MonoBehaviour {
                         "from behind, just like you've trained her to do so many times.\n\n" +
                         "Stretching out your arm, you grab hold of the harness and swing up into the saddle.  " +
                         "As you ride off, you see the Sherrif has made it back to a sitting position and is aiming his gun at you.  You duck down as he fires.\n\n" +
-                        "But the horse is too fast and the shot goes wide.  Free and clear, they have no chance at catching you now.  " + 
+                        "Your horse is too fast and the shot goes wide.  Free and clear, they have no chance at catching you now.  " + 
                         "You recall that Deadwood just opened up a new brothel.  This calls for a little celebration.\n\n" +
-                        "***GAME OVER.  YOU WIN!***\n[[R]]estart\n[[Q]]uit";
+                        "***GAME OVER.  YOU WIN!***\n\n[[R]]estart\n[[Q]]uit";
         if (Input.GetKeyDown(KeyCode.R)) { restart(); }
         else if (Input.GetKeyDown(KeyCode.Q)) { Application.Quit(); }
     }
