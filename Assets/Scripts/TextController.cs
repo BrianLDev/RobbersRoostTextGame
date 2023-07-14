@@ -80,7 +80,8 @@ public class TextController : MonoBehaviour {
 
     void bottleToFace()
     {
-        roomText.text = "The thought of wasting good whiskey goes against everything you believe in.  But hell, maybe he's thirsty.\n\n" +
+        roomText.text = "The thought of wasting good whiskey goes against everything you believe in, " + 
+                        "but hell if this ain't a good cause.\n\n" +
                         "\"All right I'll come with you, but this laying in the dirt stuff is thirsty work.  Allow me a few swallows.\"\n\n" +
                         "\"That's fine Kid.  Just make it quick.\"\n\n" +
                         "You tilt the bottle back against your lips and feel a warm tingle rush down your throat.  Motioning for one more, you tilt it back again, then reach over your head " +
@@ -93,7 +94,7 @@ public class TextController : MonoBehaviour {
     void staggering()
     {
         roomText.text = "You're finally on your feet.  Staggering, really, but on your feet at least.\n\n" +
-                        "The one that crumpled to the dirt looks to be the Sherrif, but that Deputy bastard has his eye on you and he's moving in with fists raised ready for a fight.\n\n" +
+                        "The one that crumpled to the dirt looks to be the Sherrif, but that Deputy bastard has his eye on you and he's closing in with fists raised, ready for a fight.\n\n" +
                         "\"Let's do this little man.\" you snarl as he advances.\n\n" +
                         "[[P]]unch, [[K]]ick, [[D]]ive for gun.";
         if (Input.GetKeyDown(KeyCode.P)) { myState = States.punchBlocked; }
@@ -113,10 +114,10 @@ public class TextController : MonoBehaviour {
 
     void kickMissed()
     {
-        roomText.text = "As the Deputy walks towards you, you sprint directly at him, throwing up dirt and dust in your wake.\n\n" +
-                        "Just before you reach him, you jump into the air and throw a nasty kick aimed right at his knee.\n\n" +
-                        "You sail past as the Deputy deftly side steps you.\n\n" +
-                        "What is this guy, a God Damn ninja?!\n\n" +
+        roomText.text = "As the Deputy walks towards you, you sprint towards him, throwing up dirt and dust in your wake.\n\n" +
+                        "At the perfect moment, you jump into the air and launch a nasty kick aimed at his knee.\n\n" +
+                        "You sail right past as the Deputy deftly side steps you.\n\n" +
+                        "\"How in the goddamn hell?!?\"\n\n" +
                         "[[R]]eturn.";
         pushYourLuck += 1;
         if (Input.GetKeyDown(KeyCode.R)) { myState = States.staggering; }
@@ -124,8 +125,8 @@ public class TextController : MonoBehaviour {
 
     void armed()
     {
-        roomText.text = "You imagine yourself diving towards your gun, snatching it off the ground with one hand, then rolling forward to pop up on your feet " +
-                        "with your gun aimed at the Deputy.  Ok, works just fine in theory, now for the attempt...\n\n" +
+        roomText.text = "You imagine yourself diving towards your gun, snatching it off the ground with one hand, " + 
+                        "then rolling forward to pop up on your feet with your gun aimed at the Deputy.  " + "Ok, works just fine in theory, now for the attempt...\n\n" +
                         "And what do you know, it goes exactly as you planned.\n\n" +
                         "You now have a gun in your hands in a standoff with the deputy, and by most accounts, you are the fastest living gun in the West, hungover or not.  " +
                         "You hear a horse braying behind you and remember that your 'ol pal Dynamite Hooves is nearby.\n\n" +
